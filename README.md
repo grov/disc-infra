@@ -6,3 +6,14 @@ Automatique Infrastructure discovery, not yet finished (started ?) using :
 - SSLScan
 - Dirb
 - soon more ...
+
+
+#  Use 
+
+Easy Peasy ... :
+
+```python
+python disc-infra.py
+```
+
+Need to add a few more tools ...
