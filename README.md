@@ -5,6 +5,7 @@ Automatique Infrastructure discovery, not yet finished (started ?) using :
 - DNSmap
 - SSLScan
 - Dirb
+- Nikto
 - soon more ...
 
 
