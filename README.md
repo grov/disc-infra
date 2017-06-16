@@ -13,7 +13,7 @@ Automatique Infrastructure discovery, not yet finished (started ?) using :
 
 Easy Peasy ... :
 
-```python
+```shell
 chmod +x disc-infra.py
 python disc-infra.py
 ```
