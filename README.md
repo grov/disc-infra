@@ -14,6 +14,7 @@ Automatique Infrastructure discovery, not yet finished (started ?) using :
 Easy Peasy ... :
 
 ```python
+chmod +x disc-infra.py
 python disc-infra.py
 ```
 
