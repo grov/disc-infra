@@ -1,23 +1,24 @@
 #!/usr/bin/python
 import os
 import sys
+from termcolor import colored
 
-print("Automatic Infrastructure Discovery")
-print("* Nmap")
-print("* Dnsmap")
-print("* SslScan")
-print("* Dirb")
-print("* Nikto")
+
+print(colored("Automatic Infrastructure Discovery",'green'))
+print(colored("* Nmap",'green'))
+print(colored("* Dnsmap",'green'))
+print(colored("* SslScan",'green'))
+print(colored("* Dirb",'green'))
+print(colored("* Nikto",'green'))
 
 
 #Domain ?
 host = raw_input("Domain ? ")
-output_dir = raw_input("Output Directory ? ")
 
 # NMAP
 def nmap():
 	nmap = "nmap -sC -sS -sV -p 1-65535 -O -v --max-scan-delay 25 -oA nmap "
-	print("Command : ") + nmap, host
+	print(colored("Command : ",'green')) + nmap, host
 	os.system(nmap + ' ' + host)
 nmap()
 
@@ -25,14 +26,14 @@ nmap()
 def dnsmap():
         dnsmap = "dnsmap"
         prefix = "-c dnsmap.csv"
-        print("Command : ") + dnsmap, host, prefix
+        print(colored("Command : ",'green')) + dnsmap, host, prefix
         os.system(dnsmap+' '+host+' '+prefix)
 dnsmap()
 
 #SSLSCAN
 def ssl():
 	ssl = "sslscan --xml=sslscan.xml"
-	print("Command : ") + ssl, host
+	print(colored("Command : ",'green')) + ssl, host
 	os.system(ssl+' '+host)
 ssl()
 
@@ -40,13 +41,13 @@ ssl()
 def dirb():
 	dirb = "dirb"
 	host2='https://'+host+' /usr/share/wordlists/dirb/common.txt'
-	print("Command : ") + dirb, host2
+	print(colored("Command : ",'green')) + dirb, host2
 	os.system(dirb+' '+host2+' '">dirb.txt")
 dirb()
 
 #NIKTO
 def nikto():
         nikto = "nikto -output nikto.html -h "
-        print("Command : ") + nikto, host
+        print(colored("Command : ",'green')) + nikto, host
         os.system(nikto+' '+host)
 nikto()
