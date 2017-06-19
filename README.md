@@ -7,6 +7,7 @@ Automatique Infrastructure discovery, not yet finished (started ?) using :
 - Dirb
 - Nikto
 - Wafw00f
+- THEHARVESTER (google)
 - soon more ...
 
 
