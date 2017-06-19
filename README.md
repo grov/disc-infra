@@ -3,6 +3,7 @@ Automatique Infrastructure discovery, not yet finished (started ?) using :
 
 - Nmap
 - DNSmap
+- DnsEnum
 - SSLScan
 - Dirb
 - Nikto
