@@ -15,7 +15,6 @@ Easy Peasy ... :
 
 ```shell
 pip install termcolor
-chmod +x disc-infra.py
 python disc-infra.py
 ```
 
