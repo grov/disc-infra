@@ -10,6 +10,7 @@ print(colored("* Dnsmap",'green'))
 print(colored("* SslScan",'green'))
 print(colored("* Dirb",'green'))
 print(colored("* Nikto",'green'))
+print(colored("* WafW00f",'green'))
 
 
 #Domain ?
@@ -51,3 +52,10 @@ def nikto():
         print(colored("Command : ",'green')) + nikto, host
         os.system(nikto+' '+host)
 nikto()
+
+# WafW00f
+def wafw00f():
+        wafw00f = "wafw00f"
+        print(colored("Command : ",'green')) + wafw00f, host
+        os.system(wafw00f+ ' ' + host+' '+">wafw00f.txt")
+wafw00f()
