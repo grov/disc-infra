@@ -11,6 +11,8 @@ print(colored("* SslScan",'green'))
 print(colored("* Dirb",'green'))
 print(colored("* Nikto",'green'))
 print(colored("* WafW00f",'green'))
+print(colored("* THEHARVESTER",'green'))
+
 
 
 #Domain ?
@@ -59,3 +61,10 @@ def wafw00f():
         print(colored("Command : ",'green')) + wafw00f, host
         os.system(wafw00f+ ' ' + host+' '+">wafw00f.txt")
 wafw00f()
+
+# THEHARVESTER
+def theharvester():
+        theharvester = "theharvester -b google -d "
+        print(colored("Command : ",'green')) + theharvester, host
+        os.system(theharvester + ' ' + host + ' ' +">theharvester.txt")
+theharvester()
