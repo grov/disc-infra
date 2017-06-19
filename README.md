@@ -6,6 +6,7 @@ Automatique Infrastructure discovery, not yet finished (started ?) using :
 - SSLScan
 - Dirb
 - Nikto
+- Wafw00f
 - soon more ...
 
 
