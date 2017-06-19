@@ -7,6 +7,7 @@ from termcolor import colored
 print(colored("Automatic Infrastructure Discovery",'green'))
 print(colored("* Nmap",'green'))
 print(colored("* Dnsmap",'green'))
+print(colored("* DnsEnum",'green'))
 print(colored("* SslScan",'green'))
 print(colored("* Dirb",'green'))
 print(colored("* Nikto",'green'))
@@ -32,6 +33,13 @@ def dnsmap():
         print(colored("Command : ",'green')) + dnsmap, host, prefix
         os.system(dnsmap+' '+host+' '+prefix)
 dnsmap()
+
+# DnsEnum
+def dnsenum():
+        dnsenum = "dnsenum -o dnsenum.txt -f /usr/share/wordlists/dnsmap.txt -v$
+        print(colored("Command : ",'green')) + dnsenum, host
+        os.system(dnsenum + ' ' + host)
+dnsenum()
 
 #SSLSCAN
 def ssl():
