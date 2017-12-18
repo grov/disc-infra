@@ -29,5 +29,9 @@ pip install setuptools
 pip install termcolor
 python disc-infra.py
 ```
-
-Need to add a few more tools ...
+# Know Bug
+I dunno how to handle "bad interpreter" error or something like that so just do :
+```shell
+tr -d '\r' < disc-infra.py > disc-infra2.py
+python disc-infra2.py
+```
