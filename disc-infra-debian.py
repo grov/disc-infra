@@ -9,7 +9,7 @@ print(colored("Automatic Infrastructure Discovery",'green'))
 print(colored("* Nmap",'green'))
 print(colored("* Dnsmap",'green'))
 print(colored("* DnsEnum",'green'))
-print(colored("* SslScan",'green'))
+print(colored("* testssl.sh",'green'))
 print(colored("* Dirb",'green'))
 print(colored("* Nikto",'green'))
 print(colored("* WafW00f",'green'))
@@ -30,9 +30,9 @@ def nmap():
 	os.system(nmap + ' ' + host)
 nmap()
 
-print "╔════════════════════════════════════════════════════════════════╗"
-print "║                             DNSmap                             ║"
-print "╚════════════════════════════════════════════════════════════════╝"
+#print "╔════════════════════════════════════════════════════════════════╗"
+#print "║                             DNSmap                             ║"
+#print "╚════════════════════════════════════════════════════════════════╝"
 # DNSMAP
 #def dnsmap():
 #        dnsmap = "dnsmap"
@@ -41,9 +41,9 @@ print "╚═══════════════════════�
 #        os.system(dnsmap+' '+host+' '+prefix)
 #dnsmap()
 
-print "╔════════════════════════════════════════════════════════════════╗"
-print "║                             DNSenum                            ║"
-print "╚════════════════════════════════════════════════════════════════╝"
+#print "╔════════════════════════════════════════════════════════════════╗"
+#print "║                             DNSenum                            ║"
+#print "╚════════════════════════════════════════════════════════════════╝"
 # DnsEnum
 #def dnsenum():
 #        dnsenum = "dnsenum -o dnsenum.txt -f /usr/share/wordlists/dnsmap.txt -v
@@ -52,11 +52,11 @@ print "╚═══════════════════════�
 #dnsenum()
 
 print "╔════════════════════════════════════════════════════════════════╗"
-print "║                             SSLscan                            ║"
+print "║                             Testssl.sh                         ║"
 print "╚════════════════════════════════════════════════════════════════╝"
 #SSLSCAN
 def ssl():
-	ssl = "sslscan --xml=sslscan.xml"
+	ssl = "/etc/testssl.sh/testssl.sh --html"
 	print(colored("Command : ",'green')) + ssl, host
 	os.system(ssl+' '+host)
 ssl()
@@ -69,7 +69,7 @@ def dirb():
 	dirb = "dirb"
 	host2='https://'+host+' /usr/share/dirb/wordlists/common.txt'
 	print(colored("Command : ",'green')) + dirb, host2
-	os.system(dirb+' '+host2+' '">dirb.txt")
+	os.system(dirb+' '+host2+' '"-o dirb.txt")
 dirb()
 
 print "╔════════════════════════════════════════════════════════════════╗"
@@ -89,7 +89,9 @@ print "╚═══════════════════════�
 def wafw00f():
         wafw00f = "wafw00f"
         print(colored("Command : ",'green')) + wafw00f, host
-        os.system(wafw00f+ ' ' + host+' '+">wafw00f.txt")
+        #os.system(wafw00f+ ' ' + host+' '+"> wafw00f.txt")
+	output=os.system(wafw00f+ ' ' + host)
+	
 wafw00f()
 
 print "╔════════════════════════════════════════════════════════════════╗"
@@ -99,5 +101,5 @@ print "╚═══════════════════════�
 def theharvester():
         theharvester = "theharvester -b google -d "
         print(colored("Command : ",'green')) + theharvester, host
-        os.system(theharvester + ' ' + host + ' ' +">theharvester.txt")
+        os.system(theharvester + ' ' + host + ' ' +"-f theharvester.txt")
 theharvester()
