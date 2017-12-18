@@ -30,7 +30,7 @@ mkdir /etc/testssl.sh
 git clone https://github.com/drwetter/testssl.sh.git /etc/testssl.sh
 pip install setuptools
 pip install termcolor
-python disc-infra.py
+python disc-infra-debian.py
 ```
 # Know Bug
 I dunno how to handle "bad interpreter" error or something like that so just do :
