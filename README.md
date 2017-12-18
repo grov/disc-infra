@@ -4,7 +4,7 @@ Automatique Infrastructure discovery, not yet finished (started ?) using :
 - Nmap
 - DNSmap
 - DnsEnum
-- ~~ 	SSLScan ~~
+- ~~SSLscan~~
 - testssl.sh
 - Dirb
 - Nikto
