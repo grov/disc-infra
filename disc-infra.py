@@ -30,6 +30,9 @@ def nmap():
 	os.system(nmap + ' ' + host)
 nmap()
 
+print "╔════════════════════════════════════════════════════════════════╗"
+print "║                             DNSmap                             ║"
+print "╚════════════════════════════════════════════════════════════════╝"
 # DNSMAP
 #def dnsmap():
 #        dnsmap = "dnsmap"
@@ -38,6 +41,9 @@ nmap()
 #        os.system(dnsmap+' '+host+' '+prefix)
 #dnsmap()
 
+print "╔════════════════════════════════════════════════════════════════╗"
+print "║                             DNSenum                            ║"
+print "╚════════════════════════════════════════════════════════════════╝"
 # DnsEnum
 #def dnsenum():
 #        dnsenum = "dnsenum -o dnsenum.txt -f /usr/share/wordlists/dnsmap.txt -v
