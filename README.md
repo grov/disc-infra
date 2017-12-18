@@ -19,7 +19,7 @@ Easy Peasy ... :
 
 ```shell
 pip install termcolor
-python disc-infra.py
+python disc-infra-kali.py
 ```
 # Install on Debian (ubuntu, mint etc.)
 ```shell
