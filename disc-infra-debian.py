@@ -23,33 +23,33 @@ host = raw_input("Domain ? ")
 print "╔════════════════════════════════════════════════════════════════╗"
 print "║                             Nmap                               ║"
 print "╚════════════════════════════════════════════════════════════════╝"
-# NMAP
+#NMAP
 def nmap():
 	nmap = "nmap -F -O -v -oA nmap "
 	print(colored("Command : ",'green')) + nmap, host
 	os.system(nmap + ' ' + host)
 nmap()
 
-#print "╔════════════════════════════════════════════════════════════════╗"
-#print "║                             DNSmap                             ║"
-#print "╚════════════════════════════════════════════════════════════════╝"
-# DNSMAP
-#def dnsmap():
-#        dnsmap = "dnsmap"
-#        prefix = "-c dnsmap.csv"
-#        print(colored("Command : ",'green')) + dnsmap, host, prefix
-#        os.system(dnsmap+' '+host+' '+prefix)
-#dnsmap()
+print "╔════════════════════════════════════════════════════════════════╗"
+print "║                             DNSmap                             ║"
+print "╚════════════════════════════════════════════════════════════════╝"
+#DNSMAP
+def dnsmap():
+        dnsmap = "dnsmap"
+        prefix = "-r dnsmap.txt"
+        print(colored("Command : ",'green')) + dnsmap, host, prefix
+        os.system(dnsmap+' '+host+' '+prefix)
+dnsmap()
 
-#print "╔════════════════════════════════════════════════════════════════╗"
-#print "║                             DNSenum                            ║"
-#print "╚════════════════════════════════════════════════════════════════╝"
-# DnsEnum
-#def dnsenum():
-#        dnsenum = "dnsenum -o dnsenum.txt -f /usr/share/wordlists/dnsmap.txt -v
-#        print(colored("Command : ",'green')) + dnsenum, host
-#        os.system(dnsenum + ' ' + host)
-#dnsenum()
+print "╔════════════════════════════════════════════════════════════════╗"
+print "║                             DNSenum                            ║"
+print "╚════════════════════════════════════════════════════════════════╝"
+#DNSenum
+def dnsenum():
+        dnsenum = "dnsenum -o dnsenum.txt -v"
+        print(colored("Command : ",'green')) + dnsenum, host
+        os.system(dnsenum + ' ' + host)
+dnsenum()
 
 print "╔════════════════════════════════════════════════════════════════╗"
 print "║                             Testssl.sh                         ║"
