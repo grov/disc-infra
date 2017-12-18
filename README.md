@@ -25,6 +25,8 @@ python disc-infra.py
 sed -i '$ a\deb http://http.kali.org/kali kali-rolling main contrib non-free' /etc/apt/sources.list
 apt-get update && apt-get upgrade
 apt-get install nmap dnsmap dnsenum sslscan dirb nikto wafw00f theharvester
+mkdir /etc/testssl.sh
+git clone https://github.com/drwetter/testssl.sh.git /etc/testssl.sh
 pip install setuptools
 pip install termcolor
 python disc-infra.py
